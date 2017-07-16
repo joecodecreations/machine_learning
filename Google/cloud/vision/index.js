@@ -1,5 +1,5 @@
 const request = require('request'),
-  keys = require('./keys'),
+  dotenv = require('dotenv').config(),
   base64 = require('node-base64-image'); //decode also available
 
 
@@ -15,7 +15,7 @@ let image_options = {
 /* base64 image */
 base64.encode(image_url, image_options, (error, base64ImageString) => {
 
-  let request_url = 'https://vision.googleapis.com/v1/images:annotate?key=' + keys.token;
+  let request_url = 'https://vision.googleapis.com/v1/images:annotate?key=' + process.env.TOKEN;
   let request_body = {
     "requests": [{
       "image": {

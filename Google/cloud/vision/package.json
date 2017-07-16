@@ -9,6 +9,7 @@
   },
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^4.0.0",
     "node-base64-image": "^1.0.4"
   }
 }

@@ -1,6 +1,5 @@
-const env = require('dotenv').config(),
-  request = require('request');
-
+const env = require('dotenv').config();
+const request = require('request');
 
 let request_url = 'https://language.googleapis.com/v1beta1/documents:annotateText?key=' + process.env.TOKEN;
 
@@ -11,7 +10,6 @@ let Documnet = {
   // Union field source can be only one of the following:
   "content": 'I bet you are a great swimmer',
   //"gcsContentUri": string, // url of where content is
-  // End of list of possible types for union field source.
 };
 
 let Features = {
